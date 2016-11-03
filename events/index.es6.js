@@ -1,5 +1,4 @@
 import * as lang from '../lang'
-import _find from 'lodash/find'
 
 /**
  * A collection of javascript event utility functions
@@ -44,9 +43,9 @@ const addListener = (el, evt, fn, capture) => {
 }
 
 const removeListener = (el, evt) => {
-  const registered = _find(listeners, (listener) => listener.el === el && listener.evt === evt)
+  const registered = listeners.filter(listener => listener.el === el && listener.evt === evt)
 
-  registered.forEach((listener) => {
+  registered.forEach(listener => {
     listener.el.removeEventListener(listener.evt, listener.handler, listener.capture)
   })
 }
