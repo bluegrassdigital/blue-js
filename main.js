@@ -1,4 +1,4 @@
-exports.dom = require('./source/dom')
-exports.events = require('./source/events')
-exports.ps = require('./source/ps')
-exports.lang = require('./source/lang')
+exports.dom = require('./dom')
+exports.events = require('./events')
+exports.ps = require('./ps')
+exports.lang = require('./lang')
