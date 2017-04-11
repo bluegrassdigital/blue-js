@@ -483,4 +483,4 @@ camelCase for function and variable names
 
 - Pull the repo
 - run `npm install`
-- run `gulp` to build from the `*.es6.js` files to the compiled `*.js` files
+- run `npm start` to run all unit tests, lint the codebase, and build the API docs
