@@ -1,0 +1,24 @@
+var apply = require('../apply')
+var assert = require('chai').assert
+
+describe('apply', function () {
+  it('should iterate over any iterable', function () {
+    var items = [0, 1, 2, 3]
+    apply(items, function (item, index) {
+      assert.equal(item, index)
+    })
+    var foo = '0123'
+    apply(foo, function (item, index) {
+      assert.equal(item, index)
+    })
+  })
+  it('should still run the function against the object if not an iterable', function () {
+    var foo = {
+      text: '123'
+    }
+    apply(foo, function (item, index) {
+      assert.equal(item.text, '123')
+      assert.equal(typeof index, 'undefined')
+    })
+  })
+})

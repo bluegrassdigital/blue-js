@@ -1,5 +1,7 @@
 # blue-js
 
+[![npm version](https://badge.fury.io/js/blue-js.svg)](https://badge.fury.io/js/blue-js)
+
 **blue-js** is a super lightweight commonjs javascript dom & events library
 
 This library is developed and maintained internally at [bluegrassdigital](http://www.bluegrassdigital.com)
@@ -39,4 +41,4 @@ camelCase for function and variable names
 
 - Pull the repo
 - run `npm install`
-- run `gulp` to build from the `*.es6.js` files to the compiled `*.js` files
+- run `npm start` to run all unit tests, lint the codebase, and build the API docs
