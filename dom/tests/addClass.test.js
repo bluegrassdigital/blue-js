@@ -5,6 +5,7 @@ var assert = require('chai').assert
 describe('addClass', function () {
   jsdom()
   it('should add a class to the current class', function () {
+    this.timeout(5000)
     Object.defineProperty(window.Element.prototype, 'classList', {
       get: function () {
         return null
