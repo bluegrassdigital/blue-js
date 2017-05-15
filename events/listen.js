@@ -5,8 +5,9 @@ var removeSpecificListeners = require('./_listeners').removeSpecificListeners
 Listen for one or more events (custom or standard)
 
 @param {HTMLElement} el The dom element
-@param {String} name The event or events (space-separated) to listen for
+@param {String} names The event or events (space-separated) to listen for
 @param {Function} fn The callback to fire when the event occurs
+@param {Boolean} capture Whether to capture the event or not
 @returns {{remove: function}} An object with a `remove` method to remove the listener later
 @example
 Add a listener:

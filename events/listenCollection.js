@@ -5,8 +5,9 @@ var apply = require('../lang/apply')
 Same as events.listen, excpet for NodeList rather than a single Element
 
 @param {NodeList} els The dom collection
-@param {String} name The event or events (space-separated) to listen for
+@param {String} names The event or events (space-separated) to listen for
 @param {Function} fn The callback to fire when the event occurs
+@param {Boolean} capture Whether to capture the event or not
 @memberof module:events
 @alias listenCollection
 @function
