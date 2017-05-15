@@ -9,7 +9,7 @@ Add a class to an element
 @function
 */
 module.exports = function addClass (el, cls) {
-  if (window.Element.prototype.classList) return el.classList.add(cls)
+  if (el.classList && typeof el.classList.add === 'function') return el.classList.add(cls)
   if (!hasClass(el, cls)) {
     el.className += ' ' + cls
   }

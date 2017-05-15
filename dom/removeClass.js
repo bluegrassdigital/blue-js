@@ -9,6 +9,6 @@ Remove a class from an element
 @function
 */
 module.exports = function removeClass (el, cls) {
-  if (window.Element.prototype.classList) return el.classList.remove(cls)
+  if (el.classList && typeof el.classList.remove === 'function') return el.classList.remove(cls)
   el.className = filterClass(el.className, cls)
 }

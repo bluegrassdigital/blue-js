@@ -1,6 +1,6 @@
 {
   "name": "blue-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A super lightweight functional commonjs dom & events library",
   "main": "main.js",
   "scripts": {

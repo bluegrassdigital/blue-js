@@ -8,5 +8,5 @@ Check if an element has a class
 @function
 */
 module.exports = function hasClass (el, cls) {
-  return (window.Element.prototype.classList && el.classList.contains(cls)) || splitClass(el.className).indexOf(cls) > -1
+  return (el.classList && typeof el.classList.containes === 'function' && el.classList.contains(cls)) || splitClass(el.className).indexOf(cls) > -1
 }

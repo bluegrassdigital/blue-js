@@ -10,7 +10,7 @@ Toggle a class on an element
 @function
 */
 module.exports = function toggleClass (el, cls) {
-  if (window.Element.prototype.classList) return el.classList.toggle(cls)
+  if (el.classList && typeof el.classList.toggle === 'function') return el.classList.toggle(cls)
   if (hasClass(el, cls)) {
     removeClass(el, cls)
   } else {
