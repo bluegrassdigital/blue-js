@@ -1,5 +1,5 @@
 module.exports = function apply (obj, fn) {
-  if (obj.length) {
+  if (typeof obj.length !== 'undefined' && obj.length >= 0) {
     for (var i = 0; i < obj.length; i++) {
       fn(obj[i], i)
     }

@@ -21,4 +21,11 @@ describe('apply', function () {
       assert.equal(typeof index, 'undefined')
     })
   })
+  it('should not run the function against an iterable of zero length', function (done) {
+    var items = []
+    apply(items, function (item, index) {
+      assert.fail()
+    })
+    done()
+  })
 })
