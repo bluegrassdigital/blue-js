@@ -36,7 +36,7 @@ exports.subscribe = function subscribe (topic, handler) {
 
   // Provide handle back for removal of topic
   return {
-    remove: () => {
+    remove: function () {
       delete topics[topic][index]
     }
   }
