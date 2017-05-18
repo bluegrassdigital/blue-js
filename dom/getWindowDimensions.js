@@ -7,7 +7,9 @@ Cross browser funtion for getting the dimensions of the window
 @memberof module:dom
 @alias getWindowDimensions
 */
-module.exports = function getWindowDimensions (w = window, d = document) {
+module.exports = function getWindowDimensions (w, d) {
+  w = w || window
+  d = d || document
   var e = d.documentElement
   var g = d.getElementsByTagName('body')[0]
   var width = w.innerWidth || e.clientWidth || g.clientWidth
