@@ -7,7 +7,7 @@ module.exports = function createCustom (name, data, eventProps) {
   CustomEvent.prototype = window.Event.prototype
   data = data || {}
   eventProps = eventProps || {}
-  var UseEvent = window.CustomEvent || CustomEvent
+  var UseEvent = typeof window.CustomEvent === 'function' ? window.CustomEvent : CustomEvent
   var params = {
     detail: data,
     bubbles: typeof eventProps.bubbles === 'boolean' ? eventProps.bubbles : true,

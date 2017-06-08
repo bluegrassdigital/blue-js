@@ -254,15 +254,15 @@ A collection of event utility functions
 
 
 * [events](#module_events)
-    * [.listen(el, name, fn)](#module_events.listen) ⇒ <code>Object</code>
-    * [.listenCollection(els, name, fn)](#module_events.listenCollection)
+    * [.listen(el, names, fn, capture)](#module_events.listen) ⇒ <code>Object</code>
+    * [.listenCollection(els, names, fn, capture)](#module_events.listenCollection)
     * [.removeListeners(els, names)](#module_events.removeListeners)
     * [.trigger(el, name, [data], [eventProps])](#module_events.trigger)
     * ~~[.triggerCustom(el, name, [data], [eventProps])](#module_events.triggerCustom)~~
 
 <a name="module_events.listen"></a>
 
-### events.listen(el, name, fn) ⇒ <code>Object</code>
+### events.listen(el, names, fn, capture) ⇒ <code>Object</code>
 Listen for one or more events (custom or standard)
 
 **Kind**: static method of <code>[events](#module_events)</code>  
@@ -271,8 +271,9 @@ Listen for one or more events (custom or standard)
 | Param | Type | Description |
 | --- | --- | --- |
 | el | <code>HTMLElement</code> | The dom element |
-| name | <code>String</code> | The event or events (space-separated) to listen for |
+| names | <code>String</code> | The event or events (space-separated) to listen for |
 | fn | <code>function</code> | The callback to fire when the event occurs |
+| capture | <code>Boolean</code> | Whether to capture the event or not |
 
 **Example**  
 Add a listener:
@@ -318,7 +319,7 @@ const listener = events.listen(fooLink, 'click', (event) => {
 ```
 <a name="module_events.listenCollection"></a>
 
-### events.listenCollection(els, name, fn)
+### events.listenCollection(els, names, fn, capture)
 Same as events.listen, excpet for NodeList rather than a single Element
 
 **Kind**: static method of <code>[events](#module_events)</code>  
@@ -326,8 +327,9 @@ Same as events.listen, excpet for NodeList rather than a single Element
 | Param | Type | Description |
 | --- | --- | --- |
 | els | <code>NodeList</code> | The dom collection |
-| name | <code>String</code> | The event or events (space-separated) to listen for |
+| names | <code>String</code> | The event or events (space-separated) to listen for |
 | fn | <code>function</code> | The callback to fire when the event occurs |
+| capture | <code>Boolean</code> | Whether to capture the event or not |
 
 <a name="module_events.removeListeners"></a>
 

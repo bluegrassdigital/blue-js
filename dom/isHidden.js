@@ -1,3 +1,5 @@
+var isVisible = require('./isVisible')
+
 /**
 Check whether an element is hidden
 @param {HTMLElement} el The dom node
@@ -7,5 +9,5 @@ Check whether an element is hidden
 @function
 */
 module.exports = function isHidden (el) {
-  return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length)
+  return !isVisible(el)
 }
