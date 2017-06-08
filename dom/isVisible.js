@@ -1,5 +1,3 @@
-var isHidden = require('./isHidden')
-
 /**
 Check whether an element is visible
 
@@ -9,5 +7,5 @@ Check whether an element is visible
 @alias isVisible
 */
 module.exports = function isVisible (el) {
-  return !isHidden(el)
+  return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length)
 }
