@@ -1,4 +1,10 @@
-var splitClass = require('../utils/classlist').splitClass
+'use strict';
+
+exports.__esModule = true;
+exports.default = hasClass;
+
+var _classlist = require('../utils/classlist');
+
 /**
 Check if an element has a class
 @param {HTMLElement} el The dom node
@@ -7,6 +13,6 @@ Check if an element has a class
 @alias hasClass
 @function
 */
-module.exports = function hasClass (el, cls) {
-  return (el.classList && typeof el.classList.containes === 'function' && el.classList.contains(cls)) || splitClass(el.className).indexOf(cls) > -1
+function hasClass(el, cls) {
+  return el.classList && typeof el.classList.contains === 'function' && el.classList.contains(cls) || (0, _classlist.splitClass)(el.className).indexOf(cls) > -1;
 }

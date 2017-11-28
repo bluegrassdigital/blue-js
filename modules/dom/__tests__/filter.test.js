@@ -1,5 +1,5 @@
-var filter = require('../filter')
-var assert = require('chai').assert
+import filter from '../filter'
+import {assert} from 'chai'
 
 describe('filter', function () {
   var items = [1, 2, 2, 2, 3]

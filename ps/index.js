@@ -1,3 +1,8 @@
+"use strict";
+
+exports.__esModule = true;
+exports.subscribe = subscribe;
+exports.publish = publish;
 /**
 This is a basic PubSub (Publish and Subscribe) implementation.
 
@@ -5,8 +10,8 @@ This is a basic PubSub (Publish and Subscribe) implementation.
 @see {@link https://davidwalsh.name/pubsub-javascript}
 @module ps
 */
-var topics = {}
-var hOP = topics.hasOwnProperty
+var topics = {};
+var hOP = topics.hasOwnProperty;
 
 /**
 Subscribe to a topic
@@ -27,19 +32,19 @@ resultsListener.remove()
 ```
 @function
 */
-exports.subscribe = function subscribe (topic, handler) {
+function subscribe(topic, handler) {
   // Create the topic's object if not yet created
-  if (!hOP.call(topics, topic)) topics[topic] = []
+  if (!hOP.call(topics, topic)) topics[topic] = [];
 
   // Add the listener to queue
-  var index = topics[topic].push(handler) - 1
+  var index = topics[topic].push(handler) - 1;
 
   // Provide handle back for removal of topic
   return {
-    remove: function () {
-      delete topics[topic][index]
+    remove: function remove() {
+      delete topics[topic][index];
     }
-  }
+  };
 }
 
 /**
@@ -60,12 +65,12 @@ ps.publish('Results:Returned', ['item1', 'item2', 'item3'])
 ```
 @function
 */
-exports.publish = function publish (topic, data) {
+function publish(topic, data) {
   // If the topic doesn't exist, or there's no listeners in queue, just leave
-  if (!hOP.call(topics, topic)) return
+  if (!hOP.call(topics, topic)) return;
 
   // Cycle through topics queue, fire!
   topics[topic].forEach(function (item) {
-    item(data == null ? {} : data)
-  })
+    item(data == null ? {} : data);
+  });
 }

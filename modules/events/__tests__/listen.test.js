@@ -1,5 +1,5 @@
-var listen = require('../listen')
-var jsdom = require('mocha-jsdom')
+import listen from '../listen'
+import jsdom from 'mocha-jsdom'
 
 describe('listen', function () {
   jsdom()

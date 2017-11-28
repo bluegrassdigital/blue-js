@@ -1,5 +1,17 @@
-var listen = require('./listen')
-var apply = require('../lang/apply')
+'use strict';
+
+exports.__esModule = true;
+exports.default = listenCollection;
+
+var _listen = require('./listen');
+
+var _listen2 = _interopRequireDefault(_listen);
+
+var _apply = require('../lang/apply');
+
+var _apply2 = _interopRequireDefault(_apply);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
 Same as events.listen, excpet for NodeList rather than a single Element
@@ -12,9 +24,9 @@ Same as events.listen, excpet for NodeList rather than a single Element
 @alias listenCollection
 @function
 */
-module.exports = function listenCollection (els, names, fn, capture) {
-  capture = !!capture
-  apply(els, function (el) {
-    listen(el, names, fn, capture)
-  })
+function listenCollection(els, names, fn, capture) {
+  capture = !!capture;
+  (0, _apply2.default)(els, function (el) {
+    (0, _listen2.default)(el, names, fn, capture);
+  });
 }

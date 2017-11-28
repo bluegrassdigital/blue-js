@@ -1,6 +1,6 @@
-var getWindowDimensions = require('../getWindowDimensions')
-var jsdom = require('mocha-jsdom')
-var assert = require('chai').assert
+import getWindowDimensions from '../getWindowDimensions'
+import jsdom from 'mocha-jsdom'
+import {assert} from 'chai'
 
 describe('getWindowDimensions', function () {
   jsdom()

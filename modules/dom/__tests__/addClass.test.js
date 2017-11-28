@@ -1,6 +1,6 @@
-var addClass = require('../addClass')
-var jsdom = require('mocha-jsdom')
-var assert = require('chai').assert
+import addClass from '../addClass'
+import jsdom from 'mocha-jsdom'
+import { assert } from 'chai'
 
 describe('addClass', function () {
   jsdom()
@@ -12,7 +12,7 @@ describe('addClass', function () {
       }
     })
     var div = document.createElement('div')
-    div.className = 'foo bar'
+    div.className = 'foo bar '
     addClass(div, 'baz')
     assert.equal(div.className, 'foo bar baz')
   })

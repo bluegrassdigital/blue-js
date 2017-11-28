@@ -1,9 +1,13 @@
-module.exports = function apply (obj, fn) {
+'use strict';
+
+exports.__esModule = true;
+exports.default = apply;
+function apply(obj, fn) {
   if (typeof obj.length !== 'undefined' && obj.length >= 0) {
     for (var i = 0; i < obj.length; i++) {
-      fn(obj[i], i)
+      fn(obj[i], i);
     }
   } else {
-    fn(obj)
+    fn(obj);
   }
 }

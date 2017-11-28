@@ -1,9 +1,14 @@
-var splitClass = exports.splitClass = function (str) {
-  return str.replace(/ {1,}/g, ',').split(',')
+'use strict';
+
+exports.__esModule = true;
+exports.splitClass = splitClass;
+exports.filterClass = filterClass;
+function splitClass(str) {
+  return str.replace(/ {1,}/g, ',').split(',');
 }
 
-exports.filterClass = function (str, cls) {
+function filterClass(str, cls) {
   return splitClass(str).filter(function (match) {
-    return match !== cls && match !== ''
-  }).join(' ')
+    return match !== cls && match !== '';
+  }).join(' ');
 }

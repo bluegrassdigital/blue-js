@@ -1,5 +1,9 @@
-var listenMultipleEvents = require('./_listeners').listenMultipleEvents
-var removeSpecificListeners = require('./_listeners').removeSpecificListeners
+'use strict';
+
+exports.__esModule = true;
+exports.default = listen;
+
+var _listeners = require('./_listeners');
 
 /**
 Listen for one or more events (custom or standard)
@@ -55,11 +59,11 @@ const listener = events.listen(fooLink, 'click', (event) => {
 @alias listen
 @function
 */
-module.exports = function listen (el, names, fn, capture) {
-  capture = !!capture
-  names = names.split(' ')
-  listenMultipleEvents(el, names, fn, capture)
+function listen(el, names, fn, capture) {
+  capture = !!capture;
+  names = names.split(' ');
+  (0, _listeners.listenMultipleEvents)(el, names, fn, capture);
   return {
-    remove: removeSpecificListeners.bind(this, el, names, fn, capture)
-  }
+    remove: _listeners.removeSpecificListeners.bind(this, el, names, fn, capture)
+  };
 }

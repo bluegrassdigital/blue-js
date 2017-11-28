@@ -1,3 +1,7 @@
+"use strict";
+
+exports.__esModule = true;
+exports.default = filter;
 /**
 Filters a dom NodeList, returning an array of only those elements which match the predicate function
 
@@ -24,7 +28,7 @@ const fooLinks = document.querySelectorAll('a.foo')
 const newFilteredLinks = dom.filter(filteredLinks, dom.isVisible)
 ```
 */
-module.exports = function filter (els, fn) {
-  if (!fn) return els
-  return Array.prototype.filter.call(els, fn)
+function filter(els, fn) {
+  if (!fn) return els;
+  return Array.prototype.filter.call(els, fn);
 }

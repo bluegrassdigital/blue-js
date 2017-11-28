@@ -1,1 +1,3 @@
-exports.apply = require('./apply')
+'use strict';
+
+exports.apply = require('./apply');

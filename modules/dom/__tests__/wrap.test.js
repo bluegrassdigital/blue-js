@@ -1,6 +1,6 @@
-var wrap = require('../wrap')
-var jsdom = require('mocha-jsdom')
-var assert = require('chai').assert
+import wrap from '../wrap'
+import jsdom from 'mocha-jsdom'
+import {assert} from 'chai'
 
 describe('wrap', function () {
   jsdom({

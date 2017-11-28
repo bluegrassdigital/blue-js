@@ -1,6 +1,6 @@
-var removeClass = require('../removeClass')
-var jsdom = require('mocha-jsdom')
-var assert = require('chai').assert
+import removeClass from '../removeClass'
+import jsdom from 'mocha-jsdom'
+import {assert} from 'chai'
 
 describe('removeClass', function () {
   jsdom()

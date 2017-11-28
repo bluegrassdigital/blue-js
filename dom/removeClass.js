@@ -1,4 +1,10 @@
-var filterClass = require('../utils/classlist').filterClass
+'use strict';
+
+exports.__esModule = true;
+exports.default = removeClass;
+
+var _classlist = require('../utils/classlist');
+
 /**
 Remove a class from an element
 
@@ -8,7 +14,7 @@ Remove a class from an element
 @alias removeClass
 @function
 */
-module.exports = function removeClass (el, cls) {
-  if (el.classList && typeof el.classList.remove === 'function') return el.classList.remove(cls)
-  el.className = filterClass(el.className, cls)
+function removeClass(el, cls) {
+  if (el.classList && typeof el.classList.remove === 'function') return el.classList.remove(cls);
+  el.className = (0, _classlist.filterClass)(el.className, cls);
 }

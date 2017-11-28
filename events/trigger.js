@@ -1,4 +1,14 @@
-var createCustom = require('./_createCustom')
+'use strict';
+
+exports.__esModule = true;
+exports.default = trigger;
+
+var _createCustom = require('./_createCustom');
+
+var _createCustom2 = _interopRequireDefault(_createCustom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
 Trigger any event on a dom element, optionally pass data
 @param {HTMLElement} el The dom node
@@ -21,6 +31,6 @@ events.listen(fooLink, 'Link:Event', event => {
 @alias trigger
 @function
 */
-module.exports = function trigger (el, name, data, eventProps) {
-  el.dispatchEvent(createCustom(name, data, eventProps))
+function trigger(el, name, data, eventProps) {
+  el.dispatchEvent((0, _createCustom2.default)(name, data, eventProps));
 }

@@ -1,6 +1,6 @@
-var removeListeners = require('../removeListeners')
-var listenCollection = require('../listenCollection')
-var jsdom = require('mocha-jsdom')
+import removeListeners from '../removeListeners'
+import listenCollection from '../listenCollection'
+import jsdom from 'mocha-jsdom'
 
 describe('removeListeners', function () {
   jsdom()

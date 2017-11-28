@@ -1,3 +1,7 @@
+'use strict';
+
+exports.__esModule = true;
+exports.default = wrap;
 /**
 Wrap an html element with another element or with a wrap function
 
@@ -33,19 +37,19 @@ const foo = document.querySelector('#foo')
 dom.wrap(foo, '<div class="wrapper">', '</div>')
 ```
 */
-module.exports = function wrap (el) {
-  var newDiv = arguments[1].nodeName ? arguments[1] : document.createElement('div')
-  var parent = el.parentNode
-  parent.insertBefore(newDiv, el)
+function wrap(el) {
+  var newDiv = arguments[1].nodeName ? arguments[1] : document.createElement('div');
+  var parent = el.parentNode;
+  parent.insertBefore(newDiv, el);
   if (typeof arguments[1] === 'function') {
-    newDiv.outerHTML = arguments[1]('')
+    newDiv.outerHTML = arguments[1]('');
   }
   if (typeof arguments[1] === 'string' && typeof arguments[2] === 'string') {
-    newDiv.outerHTML = arguments[1] + arguments[2]
+    newDiv.outerHTML = arguments[1] + arguments[2];
   }
   if (typeof arguments[1] === 'string' && typeof arguments[2] === 'undefined') {
-    newDiv.outerHTML = arguments[1]
+    newDiv.outerHTML = arguments[1];
   }
-  var wrapper = el.previousSibling
-  wrapper.appendChild(el)
+  var wrapper = el.previousSibling;
+  wrapper.appendChild(el);
 }

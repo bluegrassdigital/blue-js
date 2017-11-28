@@ -1,5 +1,5 @@
-var listenCollection = require('../listenCollection')
-var jsdom = require('mocha-jsdom')
+import listenCollection from '../listenCollection'
+import jsdom from 'mocha-jsdom'
 
 describe('listenCollection', function () {
   jsdom()

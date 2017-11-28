@@ -1,6 +1,6 @@
-var hasClass = require('../hasClass')
-var jsdom = require('mocha-jsdom')
-var assert = require('chai').assert
+import hasClass from '../hasClass'
+import jsdom from 'mocha-jsdom'
+import {assert} from 'chai'
 
 describe('hasClass', function () {
   jsdom()

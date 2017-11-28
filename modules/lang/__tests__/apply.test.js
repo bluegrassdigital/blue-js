@@ -1,5 +1,5 @@
-var apply = require('../apply')
-var assert = require('chai').assert
+import apply from '../apply'
+import {assert} from 'chai'
 
 describe('apply', function () {
   it('should iterate over any iterable', function () {

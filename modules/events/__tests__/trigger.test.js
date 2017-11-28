@@ -1,6 +1,6 @@
-var listen = require('../listen')
-var trigger = require('../trigger')
-var jsdom = require('mocha-jsdom')
+import listen from '../listen'
+import trigger from '../trigger'
+import jsdom from 'mocha-jsdom'
 
 describe('trigger', function () {
   jsdom()

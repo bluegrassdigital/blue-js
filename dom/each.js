@@ -1,4 +1,13 @@
-var apply = require('../lang/apply')
+'use strict';
+
+exports.__esModule = true;
+exports.default = each;
+
+var _apply = require('../lang/apply');
+
+var _apply2 = _interopRequireDefault(_apply);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
 Iterate over a dom NodeList
@@ -9,6 +18,6 @@ Iterate over a dom NodeList
 @alias each
 @function
 */
-module.exports = function each (els, fn) {
-  apply(els, fn)
+function each(els, fn) {
+  (0, _apply2.default)(els, fn);
 }

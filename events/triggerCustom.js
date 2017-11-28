@@ -1,4 +1,14 @@
-var trigger = require('./trigger')
+'use strict';
+
+exports.__esModule = true;
+exports.default = triggerCustom;
+
+var _trigger = require('./trigger');
+
+var _trigger2 = _interopRequireDefault(_trigger);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 /**
 Trigger any custom event on a dom element
 @param {HTMLElement} el The dom node
@@ -22,6 +32,6 @@ events.listen(fooLink, 'Link:Event', event => {
 @deprecated replaced with a single trigger function
 @function
 */
-module.exports = function triggerCustom (el, name, data, eventProps) {
-  return trigger(el, name, data, eventProps)
+function triggerCustom(el, name, data, eventProps) {
+  return (0, _trigger2.default)(el, name, data, eventProps);
 }

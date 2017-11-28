@@ -1,6 +1,6 @@
-var each = require('../each')
-var jsdom = require('mocha-jsdom')
-var assert = require('chai').assert
+import each from '../each'
+import jsdom from 'mocha-jsdom'
+import { assert } from 'chai'
 
 describe('each', function () {
   jsdom({

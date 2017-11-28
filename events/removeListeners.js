@@ -1,5 +1,15 @@
-var apply = require('../lang/apply')
-var removeMultipleListeners = require('./_listeners').removeMultipleListeners
+'use strict';
+
+exports.__esModule = true;
+exports.default = removeListeners;
+
+var _apply = require('../lang/apply');
+
+var _apply2 = _interopRequireDefault(_apply);
+
+var _listeners = require('./_listeners');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
  * Remove one or more events from one or more targets
@@ -16,9 +26,9 @@ const fooLinks = document.querySelectorAll('a.foo')
 events.removeListeners(fooLinks, 'click mouseenter')
 ```
 */
-module.exports = function removeListeners (els, names) {
-  var eventNames = names.split(' ')
-  apply(els, function (el) {
-    removeMultipleListeners(el, eventNames)
-  })
+function removeListeners(els, names) {
+  var eventNames = names.split(' ');
+  (0, _apply2.default)(els, function (el) {
+    (0, _listeners.removeMultipleListeners)(el, eventNames);
+  });
 }
