@@ -4,8 +4,8 @@ es
 node_modules
 umd
 /*.js
-./dom
-./events
-./ps
-./lang
+/dom
+/events
+/ps
+/lang
 !rollup.config.js
