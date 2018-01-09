@@ -7,4 +7,5 @@ umd
 ./dom
 ./events
 ./ps
+./lang
 !rollup.config.js

@@ -21,7 +21,7 @@
     "jsdoc": "jsdoc2md --template README.source.md modules/**/*.js > README.md",
     "standard": "standard ./modules/*.js",
     "standardTests": "standard --env mocha ./modules/*/__tests__/*.js",
-    "prepublish": "npm run build && npm run jsdoc",
+    "prepublishOnly": "npm run build && npm run test && npm run jsdoc",
     "start": "npm run build && npm run standard && npm run standardTests && npm run test && npm run jsdoc"
   },
   "author": {

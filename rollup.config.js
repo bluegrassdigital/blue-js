@@ -6,7 +6,7 @@ import resolve from 'rollup-plugin-node-resolve'
 
 const config = {
   input: 'modules/index.js',
-  name: 'blueSelect',
+  name: 'blueJS',
   plugins: [
     babel({
       exclude: 'node_modules/**'

@@ -11,13 +11,18 @@ export function addListener (el, evt, fn, capture) {
 }
 
 export function removeListener (el, evt) {
-  var registered = listeners.filter(function (listener) {
-    return listener.el === el && listener.evt === evt
-  })
+  var filteredListeners = []
 
-  registered.forEach(function (listener) {
-    listener.el.removeEventListener(listener.evt, listener.fn, listener.capture)
-  })
+  for (var i = 0; i < listeners.length; i++) {
+    var listener = listeners[i]
+    if (listener.el === el && listener.evt === evt) {
+      listener.el.removeEventListener(listener.evt, listener.fn, listener.capture)
+    } else {
+      filteredListeners.push(listener)
+    }
+  }
+
+  listeners = filteredListeners
 }
 
 export function removeSpecificListeners (el, names, fn, capture) {
