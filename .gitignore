@@ -8,4 +8,5 @@ umd
 /events
 /ps
 /lang
+/utils
 !rollup.config.js
