@@ -1,6 +1,6 @@
 # blue-js
 
-[![npm version](https://badge.fury.io/js/blue-js.svg)](https://badge.fury.io/js/blue-js)
+[![npm version](https://badge.fury.io/js/blue-js.svg)](https://badge.fury.io/js/blue-js) [![Greenkeeper badge](https://badges.greenkeeper.io/bluegrassdigital/blue-js.svg)](https://greenkeeper.io/)
 
 **blue-js** is a super lightweight commonjs javascript dom & events library
 
