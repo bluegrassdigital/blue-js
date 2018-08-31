@@ -4,6 +4,7 @@ import { assert } from 'chai'
 
 describe('each', function () {
   jsdom({
+    url: 'http://localhost/',
     html: '<a>0</a><a>1</a><a>2</a>'
   })
   it('should iterate over a NodeList', function () {

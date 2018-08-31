@@ -3,7 +3,7 @@ import jsdom from 'mocha-jsdom'
 import {assert} from 'chai'
 
 describe('toggleClass', function () {
-  jsdom()
+  jsdom({ url: 'http://localhost/' })
   it('should toggle a class off if it is present', function () {
     Object.defineProperty(window.Element.prototype, 'classList', {
       get: function () {

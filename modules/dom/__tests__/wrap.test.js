@@ -4,6 +4,7 @@ import {assert} from 'chai'
 
 describe('wrap', function () {
   jsdom({
+    url: 'http://localhost/',
     html: '<div class="foo"></div>'
   })
   it('should not remove the reference to the existing node', function () {

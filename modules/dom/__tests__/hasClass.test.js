@@ -3,7 +3,7 @@ import jsdom from 'mocha-jsdom'
 import {assert} from 'chai'
 
 describe('hasClass', function () {
-  jsdom()
+  jsdom({ url: 'http://localhost/' })
   it('should match a single class', function () {
     Object.defineProperty(window.Element.prototype, 'classList', {
       get: function () {

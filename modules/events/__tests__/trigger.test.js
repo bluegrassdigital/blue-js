@@ -3,7 +3,7 @@ import trigger from '../trigger'
 import jsdom from 'mocha-jsdom'
 
 describe('trigger', function () {
-  jsdom()
+  jsdom({ url: 'http://localhost/' })
   it('should trigger a standard event on an element', function (done) {
     var link = document.createElement('a')
     listen(link, 'click', function (event) {

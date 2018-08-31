@@ -2,7 +2,7 @@ import listen from '../listen'
 import jsdom from 'mocha-jsdom'
 
 describe('listen', function () {
-  jsdom()
+  jsdom({ url: 'http://localhost/' })
   it('should listen for an event', function (done) {
     var link = document.createElement('a')
     listen(link, 'click', function (event) {

@@ -3,7 +3,9 @@ import jsdom from 'mocha-jsdom'
 import { assert } from 'chai'
 
 describe('addClass', function () {
-  jsdom()
+  jsdom({
+    url: 'http://localhost/'
+  })
   it('should add a class to the current class', function () {
     this.timeout(5000)
     Object.defineProperty(window.Element.prototype, 'classList', {

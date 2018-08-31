@@ -2,7 +2,7 @@ import listenCollection from '../listenCollection'
 import jsdom from 'mocha-jsdom'
 
 describe('listenCollection', function () {
-  jsdom()
+  jsdom({ url: 'http://localhost/' })
   it('should listen for an event across multiple elements', function (done) {
     var count = 0
     var link1 = document.createElement('a')

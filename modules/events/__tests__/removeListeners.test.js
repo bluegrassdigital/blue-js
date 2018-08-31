@@ -3,7 +3,7 @@ import listenCollection from '../listenCollection'
 import jsdom from 'mocha-jsdom'
 
 describe('removeListeners', function () {
-  jsdom()
+  jsdom({ url: 'http://localhost/' })
   it('should remove a listener from a single element', function (done) {
     var count = 0
     var link = document.createElement('a')

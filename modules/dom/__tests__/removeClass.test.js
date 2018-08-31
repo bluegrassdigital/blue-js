@@ -3,7 +3,7 @@ import jsdom from 'mocha-jsdom'
 import {assert} from 'chai'
 
 describe('removeClass', function () {
-  jsdom()
+  jsdom({ url: 'http://localhost/' })
   it('should remove a class from the current class', function () {
     Object.defineProperty(window.Element.prototype, 'classList', {
       get: function () {
