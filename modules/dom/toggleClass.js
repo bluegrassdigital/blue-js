@@ -5,8 +5,8 @@ import removeClass from './removeClass'
 Toggle a class on an element
 @param {HTMLElement} el The dom node
 @param {String} cls The class to toggle
-@memberof module:dom
-@alias toggleClass
+@memberof module:blue
+@alias .toggleClass
 @function
 */
 export default function toggleClass (el, cls) {

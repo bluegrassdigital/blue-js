@@ -4,8 +4,8 @@ Cross browser funtion for getting the dimensions of the window
 @param {object} [d=document] The document element
 @returns {windowDimensions} The window dimensions
 @function
-@memberof module:dom
-@alias getWindowDimensions
+@memberof module:blue
+@alias .getWindowDimensions
 */
 export default function getWindowDimensions (w, d) {
   w = w || window
@@ -25,5 +25,5 @@ export default function getWindowDimensions (w, d) {
 @typedef {Object} windowDimensions
 @property {number} width Window width
 @property {number} height Window height
-@memberof module:dom
+@memberof module:blue
  */

@@ -7,18 +7,18 @@ Trigger any event on a dom element, optionally pass data
 @param {Object} [eventProps] Other event properties to override the defaults, which are `{ bubbles: true, cancelable: true }`
 @example
 ```js
-import { events } from 'blue-js'
+import { listen, trigger } from 'blue-js'
 
 const fooLink = document.querySelector('a.foo')
-events.trigger(fooLink, 'Link:Event', { foo: 'bar' })
+trigger(fooLink, 'Link:Event', { foo: 'bar' })
 
 // Listen for custom event and use the custom data passed to trigger
-events.listen(fooLink, 'Link:Event', event => {
+listen(fooLink, 'Link:Event', event => {
   console.log(event.detail.foo) // -> 'bar'
 })
 ```
-@memberof module:events
-@alias trigger
+@memberof module:blue
+@alias .trigger
 @function
 */
 export default function trigger (el, name, data, eventProps) {

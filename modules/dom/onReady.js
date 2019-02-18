@@ -2,8 +2,8 @@
 A callback that fires when the document is ready - roughly equaivalent to jQuery document ready
 
 @param {Function} fn The callback to fire
-@memberof module:dom
-@alias onReady
+@memberof module:blue
+@alias .onReady
 @function
 */
 export default function onReady (fn) {

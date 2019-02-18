@@ -4,33 +4,33 @@ Wrap an html element with another element or with a wrap function
 @param {HTMLElement} el The dom node
 @param {(Function|HTMLElement|string)} argument1 A callback function which is passed `el.outerHTML` as its only function parameter OR a dom node to wrap around the element OO the first of two string arguments to go before and after the element
 @param {string} [argument2] The string to use for after the dom element (both `argument1` and `argument2` should be strings)
-@memberof module:dom
-@alias wrap
+@memberof module:blue
+@alias .wrap
 @function
 @example
 Using a wrapper function:
 ```js
-import { dom } from 'blue-js'
+import { wrap } from 'blue-js'
 
 const foo = document.querySelector('#foo')
-dom.wrap(foo, html => `<div class="wrapper">${html}</div>`)
+wrap(foo, html => `<div class="wrapper">${html}</div>`)
 ```
 @example
 Using an html element:
 ```js
-import { dom } from 'blue-js'
+import { wrap } from 'blue-js'
 
 const foo = document.querySelector('#foo')
 const wrapper = document.createElement('div')
-dom.wrap(foo, wrapper)
+wrap(foo, wrapper)
 ```
 @example
 Using two strings:
 ```js
-import { dom } from 'blue-js'
+import { wrap } from 'blue-js'
 
 const foo = document.querySelector('#foo')
-dom.wrap(foo, '<div class="wrapper">', '</div>')
+wrap(foo, '<div class="wrapper">', '</div>')
 ```
 */
 export default function wrap (el) {

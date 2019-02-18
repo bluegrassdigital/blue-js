@@ -5,23 +5,23 @@ Filters a dom NodeList, returning an array of only those elements which match th
 @param {Function} fn The predicate function to test each Element against
 @returns {Array} A filtered array of dom elements
 @function
-@memberof module:dom
-@alias filter
+@memberof module:blue
+@alias .filter
 @example
 Filter only foo links with class 'bar':
 ```js
-import { dom } from 'blue-js'
+import { filter } from 'blue-js'
 
 const fooLinks = document.querySelectorAll('a.foo')
-const filteredLinks = dom.filter(fooLinks, el => dom.hasClass(el, 'bar'))
+const filteredLinks = filter(fooLinks, el => dom.hasClass(el, 'bar'))
 ```
 
 Filter only visible filteredLinks:
 ```js
-import { dom } from 'blue-js'
+import { filter } from 'blue-js'
 
 const fooLinks = document.querySelectorAll('a.foo')
-const newFilteredLinks = dom.filter(filteredLinks, dom.isVisible)
+const newFilteredLinks = filter(filteredLinks, dom.isVisible)
 ```
 */
 export default function filter (els, fn) {

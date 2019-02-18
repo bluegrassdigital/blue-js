@@ -11,11 +11,11 @@ Listen for one or more events (custom or standard)
 @example
 Add a listener:
 ```js
-import { events } from 'blue-js'
+import { listen } from 'blue-js'
 
 const fooLink = document.querySelector('a.foo')
 
-events.listen(fooLink, 'click', (event) => {
+listen(fooLink, 'click', (event) => {
   event.preventDefault()
   const { target } = event
   target.classlist.add('.is-clicked')
@@ -24,11 +24,11 @@ events.listen(fooLink, 'click', (event) => {
 @example
 Remove listener later:
 ```js
-import { events } from 'blue-js'
+import { listen } from 'blue-js'
 
 const fooLink = document.querySelector('a.foo')
 
-const listener = events.listen(fooLink, 'click', (event) => {
+const listener = listen(fooLink, 'click', (event) => {
   event.preventDefault()
   const { target } = event
   target.classlist.add('.is-clicked')
@@ -39,19 +39,19 @@ listener.remove()
 @example
 Remove listener immediately:
 ```js
-import { events } from 'blue-js'
+import { listen } from 'blue-js'
 
 const fooLink = document.querySelector('a.foo')
 
-const listener = events.listen(fooLink, 'click', (event) => {
+const listener = listen(fooLink, 'click', (event) => {
   event.preventDefault()
   const { target } = event
   target.classlist.add('.is-clicked')
   listener.remove()
 })
 ```
-@memberof module:events
-@alias listen
+@memberof module:blue
+@alias .listen
 @function
 */
 export default function listen (el, names, fn, capture) {

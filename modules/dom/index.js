@@ -1,7 +1,7 @@
 /**
  * A collection of dom utility functions
  *
- * @module dom
+ * @module blue
  */
 export { default as addClass } from './addClass'
 export { default as removeClass } from './removeClass'

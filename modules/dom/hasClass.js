@@ -3,8 +3,8 @@ import { splitClass } from '../utils/classlist'
 Check if an element has a class
 @param {HTMLElement} el The dom node
 @param {String} cls The classname to check
-@memberof module:dom
-@alias hasClass
+@memberof module:blue
+@alias .hasClass
 @function
 */
 export default function hasClass (el, cls) {

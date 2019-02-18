@@ -4,8 +4,8 @@ Remove a class from an element
 
 @param {HTMLElement} el The dom node
 @param {String} cls The class to remove
-@memberof module:dom
-@alias removeClass
+@memberof module:blue
+@alias .removeClass
 @function
 */
 export default function removeClass (el, cls) {

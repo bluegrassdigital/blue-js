@@ -4,8 +4,8 @@ Add a class to an element
 
 @param {HTMLElement} el The dom node
 @param {String} cls The class to add
-@memberof module:dom
-@alias addClass
+@memberof module:blue
+@alias .addClass
 @function
 */
 export default function addClass (el, cls) {

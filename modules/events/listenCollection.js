@@ -8,8 +8,8 @@ Same as events.listen, excpet for NodeList rather than a single Element
 @param {String} names The event or events (space-separated) to listen for
 @param {Function} fn The callback to fire when the event occurs
 @param {Boolean} capture Whether to capture the event or not
-@memberof module:events
-@alias listenCollection
+@memberof module:blue
+@alias .listenCollection
 @function
 */
 export default function listenCollection (els, names, fn, capture) {
