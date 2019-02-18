@@ -1,6 +1,6 @@
 # blue-js
 
-[![Build Status](https://travis-ci.org/bluegrassdigital/blue-js.svg?branch=master)](https://travis-ci.org/bluegrassdigital/blue-js) [![npm version](https://badge.fury.io/js/blue-js.svg)](https://badge.fury.io/js/blue-js) [![Greenkeeper badge](https://badges.greenkeeper.io/bluegrassdigital/blue-js.svg)](https://greenkeeper.io/) [![codecov](https://codecov.io/gh/bluegrassdigital/blue-js/branch/master/graph/badge.svg)](https://codecov.io/gh/bluegrassdigital/blue-js) [![gzip size](https://img.badgesize.io/https://unpkg.com/blue-js/umd/blue-js.min.js?compression=gzip)](https://unpkg.com/blue-js/umd/blue-js.min.js)
+[![Build Status](https://travis-ci.org/bluegrassdigital/blue-js.svg?branch=master)](https://travis-ci.org/bluegrassdigital/blue-js) [![npm version](https://badge.fury.io/js/blue-js.svg)](https://badge.fury.io/js/blue-js) [![Greenkeeper badge](https://badges.greenkeeper.io/bluegrassdigital/blue-js.svg)](https://greenkeeper.io/) [![codecov](https://codecov.io/gh/bluegrassdigital/blue-js/branch/master/graph/badge.svg)](https://codecov.io/gh/bluegrassdigital/blue-js) [![gzip size](https://img.badgesize.io/https://unpkg.com/blue-js/dist/blue.umd.js?compression=gzip)](https://unpkg.com/blue-js/dist/blue.umd.js)
 
 **blue-js** is a super lightweight commonjs javascript dom & events library
 
