@@ -6,13 +6,15 @@
 
 This library is developed and maintained internally at [bluegrassdigital](http://www.bluegrassdigital.com)
 
-There are 3 main modules: `events` `dom` and `ps` (pubsub)
-
-The ps module will be deprecated in v3
-
 ## Installation
 
 `npm install blue-js`
+
+### Upgrading from V2
+
+The top level module exports dom , events and ps are gone, all methods are exported directly from the root module, muvh like lodash.
+
+The pubsub implementation ps has been removed as it was somewhat outside the scope of this library - please use something like https://github.com/developit/mitt instead.
 
 ## API
 
