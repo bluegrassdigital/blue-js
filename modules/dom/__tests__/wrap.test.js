@@ -39,4 +39,11 @@ describe('wrap', function () {
     wrap(div, '<div class="test">', '</div>')
     assert.strictEqual(div.parentNode.outerHTML, '<div class="test"><div class="foo"></div></div>')
   })
+  it('should wrap an existing node with one string defining the wrapping element', function () {
+    var div = document.createElement('div')
+    document.body.appendChild(div)
+    div.className = 'foo'
+    wrap(div, '<div class="test"></div>')
+    assert.strictEqual(div.parentNode.outerHTML, '<div class="test"><div class="foo"></div></div>')
+  })
 })

@@ -25,4 +25,12 @@ describe('trigger', function () {
     })
     trigger(link, 'Foo:Bar', { foo: 'bar' })
   })
+  it('should work without window.CustomEvent defined', function (done) {
+    delete window.CustomEvent
+    var link = document.createElement('a')
+    listen(link, 'Foo:Bar', function (event) {
+      if (event.detail.foo === 'bar') done()
+    })
+    trigger(link, 'Foo:Bar', { foo: 'bar' })
+  })
 })

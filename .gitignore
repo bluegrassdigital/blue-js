@@ -1,12 +1,4 @@
 .DS_Store
 
-es
+dist
 node_modules
-umd
-/*.js
-/dom
-/events
-/ps
-/lang
-/utils
-!rollup.config.js
